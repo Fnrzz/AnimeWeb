@@ -13,7 +13,7 @@ const Search = async ({ params }) => {
   const title = decodeURI(keyword);
 
   return (
-    <div className="flex flex-col py-5 md:px-10 px-4">
+    <div className="flex flex-col py-[100px] md:px-10 px-4">
       <section>
         <Header title={`Search : ${title}`} />
         <ListCardAnime dataAPI={dataSearchAnime} />

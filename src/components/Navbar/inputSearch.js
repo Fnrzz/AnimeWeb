@@ -8,9 +8,11 @@ const InputSearch = () => {
   const router = useRouter();
 
   const heandleSearch = (event) => {
-    event.preventDefault();
-    const keyword = searchRef.current.value;
-    router.push(`/search/${keyword}`);
+    if (searchRef.current.value) {
+      const keyword = searchRef.current.value;
+      event.preventDefault();
+      router.push(`/search/${keyword}`);
+    }
   };
 
   return (

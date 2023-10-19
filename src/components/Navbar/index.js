@@ -8,7 +8,7 @@ const Navbar = () => {
   const [hamburger, setHamburger] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 w-full">
+    <nav className="fixed  top-0 z-50 w-full">
       <div className="bg-slate-950  md:flex justify-between items-center py-5 md:px-10 px-5">
         <div className="flex justify-between items-center">
           <Link href="/">
@@ -29,7 +29,7 @@ const Navbar = () => {
         </div>
         <ul
           className={`md:flex gap-4 
-          ${hamburger ? "visible duration-500 transition-all" : "hidden"}`}
+          ${hamburger ? "visible" : "hidden"}`}
         >
           <li>
             <InputSearch />

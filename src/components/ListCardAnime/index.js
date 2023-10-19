@@ -8,19 +8,19 @@ const ListCardAnime = ({ dataAPI }) => {
       {dataAPI.map((anime) => (
         <Link
           href={`/${anime.mal_id}`}
-          className="md:p-5 hover:scale-105 transition ease-in duration-300"
+          className="md:p-5 hover:scale-105 transition ease-in duration-300 cursor-pointer text-white hover:text-orange-400"
           key={anime.mal_id}
         >
           <Image
             src={anime.images.webp.image_url}
-            className="rounded-[16px] object-cover md:h-[350px] md:w-[350px] w-full h-[300px] mb-3"
+            className="rounded-[16px] object-cover lg:h-[350px] lg:w-[350px] md:h-[250px] md:w-[250px] w-full h-[250px] mb-3"
             alt={anime.title}
-            width={300}
-            height={300}
+            width="0"
+            height="0"
+            sizes="100vw"
+            priority
           />
-          <h1 className="md:text-md text-center font-bold text-white">
-            {anime.title}
-          </h1>
+          <h1 className="md:text-md text-center font-bold ">{anime.title}</h1>
         </Link>
       ))}
     </div>
