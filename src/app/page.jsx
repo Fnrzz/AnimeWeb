@@ -5,7 +5,7 @@ const Home = async () => {
     `${process.env.NEXT_PUBLIC_API_BASEURL}/top/anime?limit=8`
   );
   const data = await response.json();
-  const dataTopAnime = data.data;
+  const dataTopAnime = await data;
 
   return (
     <div className="flex flex-col py-[100px] md:px-10 px-4">

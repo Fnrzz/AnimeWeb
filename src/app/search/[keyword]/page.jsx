@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "@/components/ListCardAnime/header";
 import ListCardAnime from "@/components/ListCardAnime";
-import { useRouter } from "next/navigation";
 
 const Search = async ({ params }) => {
   const keyword = params.keyword;
@@ -9,7 +8,7 @@ const Search = async ({ params }) => {
     `${process.env.NEXT_PUBLIC_API_BASEURL}/anime?q=${keyword}`
   );
   const data = await response.json();
-  const dataSearchAnime = data.data;
+  const dataSearchAnime = await data;
   const title = decodeURI(keyword);
 
   return (
