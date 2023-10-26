@@ -1,14 +1,11 @@
 import React from "react";
 import Header from "@/components/ListCardAnime/header";
 import ListCardAnime from "@/components/ListCardAnime";
+import { getAnimeResponse } from "../../services/api";
 
 const Search = async ({ params }) => {
   const keyword = params.keyword;
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASEURL}/anime?q=${keyword}`
-  );
-  const data = await response.json();
-  const dataSearchAnime = await data;
+  const dataSearchAnime = await getAnimeResponse("anime", `q=${keyword}`);
   const title = decodeURI(keyword);
 
   return (
