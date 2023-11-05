@@ -27,6 +27,9 @@ const Page = async ({ params: { idAnime } }) => {
         <div className="border border-white p-2 rounded-lg">
           <div className="text-sm text-white">Status : {anime.data.status}</div>
         </div>
+        <div className="border border-white p-2 rounded-lg">
+          <div className="text-sm text-white">Year : {anime.data.year}</div>
+        </div>
       </div>
       <div className="flex mt-10 flex-row gap-5 flex-wrap justify-center md:justify-start">
         <Image
