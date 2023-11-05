@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "@/components/ListCardAnime/header";
 import ListCardAnime from "@/components/ListCardAnime";
-import { getAnimeResponse } from "../../services/api";
+import { getAnimeResponse } from "../../../services/api";
 
 const Search = async ({ params }) => {
   const keyword = params.keyword;

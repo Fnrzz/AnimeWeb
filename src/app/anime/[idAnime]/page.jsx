@@ -1,4 +1,4 @@
-import { getAnimeResponse } from "@/app/services/api";
+import { getAnimeResponse } from "@/services/api";
 import VideoPlayer from "@/components/utilities/VideoPlayer";
 import Image from "next/image";
 const Page = async ({ params: { idAnime } }) => {
