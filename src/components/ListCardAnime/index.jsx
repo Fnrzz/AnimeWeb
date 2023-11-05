@@ -7,7 +7,7 @@ const ListCardAnime = ({ dataAPI }) => {
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full md:gap-1 gap-5">
       {dataAPI.data?.map((anime) => (
         <Link
-          href={`/${anime.mal_id}`}
+          href={`/anime/${anime.mal_id}`}
           className="md:p-5 hover:scale-105 transition ease-in duration-300 cursor-pointer text-white hover:text-orange-400"
           key={anime.mal_id}
         >
